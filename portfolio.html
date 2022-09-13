@@ -20,27 +20,33 @@
   <body>
     <!--Верхня лінія-->
     <header class="container">
-      <nav>
-        <div class="logo-header">
-          <a href="./index.html" class="primary"
-            >Web<span class="logo-white">Studio</span></a
-          >
-        </div>
+      <div class="flex-cont">
+        <nav class="nav flex-cont">
+          <div class="logo-header">
+            <a href="./index.html" class="primary"
+              >Web<span class="logo-white">Studio</span></a
+            >
+          </div>
 
-        <ul class="site-nav">
-          <li><a href="./index.html" class="link">Студія</a></li>
-          <li><a href="./portfolio.html" class="link current">Портфоліо</a></li>
-          <li><a href="#Контакти" class="link">Контакти</a></li>
+          <ul class="site-nav">
+            <li class="item"><a href="./index.html" class="link">Студія</a></li>
+            <li class="item">
+              <a href="./portfolio.html" class="link current">Портфоліо</a>
+            </li>
+            <li class="item"><a href="#Контакти" class="link">Контакти</a></li>
+          </ul>
+        </nav>
+        <ul class="cont-nav">
+          <li class="item">
+            <a href="mailto:info@devstudio.com" class="link"
+              >info@devstudio.com</a
+            >
+          </li>
+          <li class="item">
+            <a href="tel:+380961111111" class="link">+38 096 111 11 11</a>
+          </li>
         </ul>
-      </nav>
-      <ul class="cont-nav">
-        <li>
-          <a href="mailto:info@devstudio.com" class="link"
-            >info@devstudio.com</a
-          >
-        </li>
-        <li><a href="tel:+380961111111" class="link">+38 096 111 11 11</a></li>
-      </ul>
+      </div>
     </header>
     <main>
       <section class="container">
@@ -54,9 +60,9 @@
             <li><button type="button" class="buttons">Дизайн</button></li>
             <li><button type="button" class="buttons">Маркетинг</button></li>
           </ul>
-        
-        <!--Посилання-->
-        
+
+          <!--Посилання-->
+
           <ul class="prod-list">
             <li>
               <img

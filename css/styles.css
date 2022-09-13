@@ -19,15 +19,16 @@ body {
 
 .visually-hidden {
   position: absolute;
-  white-space: nowrap;
   width: 1px;
   height: 1px;
-  overflow: hidden;
+  margin: -1px;
   border: 0;
   padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
   clip: rect(0 0 0 0);
-  clip-path: inset(50%);
-  margin: -1px;
+  overflow: hidden;
 }
 
 ul {
@@ -47,9 +48,17 @@ ul {
 
 
 /*header*/
+.flex-cont {
+  display: flex;
+  align-items: center;
+}
+
+
+
 .logo-header {
   padding-top: 24px;
-    padding-bottom: 25px;
+  padding-bottom: 25px;
+  margin-right: 93px;
 }
 .primary {
   color: var(--accent-text-color);
@@ -59,20 +68,29 @@ ul {
   font-size: 26px;
   line-height: 1.19;
   text-decoration: none;
-
-
 }
 .logo-white {
   color: var(--black-color);
 }
-.site-nav .link {
-  color: var(--title-text-color);
 
+.site-nav {
+  padding-top: 32px;
+  padding-bottom: 32px;
+  margin: 0;
+  display: flex;
+}
+.site-nav .item:not(:last-child) {
+  margin-right: 50px;
+}
+.site-nav .link {
+  display: block;
+
+  color: var(--title-text-color);
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
-  text-decoration: none;
+  text-decoration: none; 
 }
 .site-nav .link:hover,
 .site-nav .link:focus {
@@ -81,14 +99,22 @@ ul {
 .site-nav .link.current {
   color: var(--accent-text-color);
 }
-.site-nav {
-  padding-top: 32px;
-  padding-bottom: 32px;
+
+.cont-nav {
+  display: flex;
+
   margin: 0;
+  margin-left: auto;
+}
+.cont-nav .item + .item {
+  margin-left: 50px;
 }
 .cont-nav .link {
-  color: var(--primary-text-color);
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
 
+  color: var(--primary-text-color);
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
@@ -99,32 +125,28 @@ ul {
 .cont-nav .link:focus {
   color: var(--accent-text-color);
 }
-.cont-nav {
-  padding-top: 32px;
-  padding-bottom: 32px;
-  margin: 0;
-}
+
 
 /*hero*/
 .hero {
   background-color: var(--background-color);
-
   text-align: center;
 
   outline: 1px solid tomato;
 }
 .hero .hero-title {
-  color: var(--white-text-color);
+  margin-top: 0;
+  margin-bottom: 30;
+  padding-top: 200px;
 
+  color: var(--white-text-color);
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
   letter-spacing: 0.06em;
   text-transform: uppercase;
 
-  margin-top: 0;
-  margin-bottom: 30;
-  padding-top: 200px;
+
 }
 
 
@@ -136,69 +158,65 @@ ul {
 }
 
 .features-title {
+  margin-top: 0;
+  margin-bottom: 10;
+
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
   text-transform: uppercase;
 
-  margin-top: 0;
-  margin-bottom: 10;
+
 }
 .features-text {
-  color: var(--primary-text-color);
+  margin-top: 0;
+  margin-bottom: 0;
 
+  color: var(--primary-text-color);
   font-size: 14px;
   line-height: 1.71;
 
-  margin-top: 0;
-    margin-bottom: 0;
+
 }
 
 /*team*/
-
-/*.work-list {
-  margin-bottom: 94px;   ??????
-}*/
 .section-team {
   background-color: var(--button-bg-color);
-
- /* margin-bottom: 94px;      ?????   */
 }
 .team-color {
-  background-color: var(--white-text-color);
-
   padding-bottom: 30px;
+
+  background-color: var(--white-text-color);
 }
 .work-title,
 .team-title {
+  margin: 0;
+  padding-top: 94px;
+  margin-bottom: 50px;
+
   font-weight: 700;
   font-size: 36px;
   line-height: 1.16;
   text-align: center;
-
-  margin: 0;
-  padding-top: 94px;
-  margin-bottom: 50px;
 }
 .dev-title {
+  margin: 0;
+  padding-top: 30px;
+  padding-bottom: 10px;
+
   font-weight: 500;
   font-size: 16px;
   line-height: 1.19;
   text-align: center;
-
-  margin: 0;
-  padding-top: 30px;
-  padding-bottom: 10px;
 }
 .dev-text {
-  color: var(--primary-text-color);
+  margin: 0;
+  margin-bottom: 30px;
 
+  color: var(--primary-text-color);
   font-size: 16px;
   line-height: 1.19;
   text-align: center;
-
-  margin: 0;
-  margin-bottom: 30px;
 }
 
 /*production*/
@@ -209,31 +227,35 @@ ul {
   padding-bottom: 94px;
 }
 .prod-title {
+  margin: 0;
+  padding-top: 20px;
+  padding-bottom: 4px;
+
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
-
-  margin: 0;
-  padding-top: 20px;
-  padding-bottom: 4px;
 }
 .prod-text {
-  color: var(--primary-text-color);
-
-  font-size: 16px;
-  line-height: 1.88;
-
   margin: 0;
   padding-bottom: 20px;
+
+  color: var(--primary-text-color);
+  font-size: 16px;
+  line-height: 1.88;
 }
 
 
 /*Buttons*/
 .hero .button {
+  border-radius: 4px;
+  padding: 10px 32px;
+  min-width: 216px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  margin-bottom: 200px;
+
   color: var(--white-text-color);
   background-color: var(--accent-text-color);
-
   font-family: inherit;
   font-weight: 700;
   font-size: 16px;
@@ -241,33 +263,26 @@ ul {
   text-align: center;
   letter-spacing: 0.06em;
   cursor: pointer;
-
-  border-radius: 4px;
-  padding: 10px 32px;
-  min-width: 216px;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  margin-bottom: 200px;
 }
 .hero .button:hover,
-.hero .button:focus {
+.hero .button:focus {  
   background-color: #188ce8;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
 .button-list .buttons {
+  border-radius: 4px;
+  padding: 6px 22px;
+  min-width: 73px;
+
   color: var(--title-text-color);
   background-color: var(--button-bg-color);
-
   font-family: inherit;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.63;
   text-align: center;
   cursor: pointer;
-
-  border-radius: 4px;
-  padding: 6px 22px;
-  min-width: 73px;
 }
 .button-list .buttons:hover,
 .button-list .buttons:focus {
@@ -283,7 +298,6 @@ ul {
 /*footer*/
 .footer {
   background-color: var(--background-color);
-
 }
 .logo-footer {
   padding-top: 60px;
@@ -291,7 +305,6 @@ ul {
 }
 .logo-black {
   color: var(--white-text-color);
-
   font-family: Raleway, sans-serif;
   font-weight: 700;
   font-size: 26px;
@@ -302,7 +315,6 @@ ul {
 }
 .nav-foot .link {
   color: var(--white-text-color);
-
   text-decoration: none;
   font-style: normal;
   font-size: 14px;
@@ -311,7 +323,6 @@ ul {
 }
 .nav-foot .cont-link {
   color: var(--contacts-color);
-
   text-decoration: none;
   font-style: normal;
   font-size: 14px;
