@@ -343,7 +343,7 @@ img {
 .nav-foot .item:not(:last-child) {
   margin-bottom: 9px;
 }
-.nav-foot .item:first-child {
+address {
   margin-top: 20px;
 }
 .nav-foot .link {
