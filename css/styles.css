@@ -83,7 +83,6 @@ img {
   display: flex;
   align-items: center;
 }
-
 .primary {
   color: var(--accent-text-color);
 
@@ -343,7 +342,7 @@ img {
 .nav-foot .item:not(:last-child) {
   margin-bottom: 9px;
 }
-address {
+.nav-foot .item:first-child {
   margin-top: 20px;
 }
 .nav-foot .link {
